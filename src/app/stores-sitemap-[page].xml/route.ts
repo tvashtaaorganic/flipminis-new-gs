@@ -4,6 +4,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://flipminis.in';
 const MAX_URLS_PER_SITEMAP = 1000;
 
 export const revalidate = 1800; // 30 minutes
+export const dynamic = 'force-dynamic'; // Skip pre-rendering
 
 export async function GET(request: Request, { params }: { params: { page: string } }) {
     const page = parseInt(params.page);
