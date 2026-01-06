@@ -57,7 +57,7 @@ export default function PricingSection() {
 
             <h3 className="text-xl font-bold text-blue-100 mb-2 uppercase tracking-wide">Yearly</h3>
             <div className="mb-6">
-              <span className="text-5xl font-extrabold text-white">₹2000</span>
+              <span className="text-5xl font-extrabold text-white">₹1200</span>
               <span className="text-blue-100 font-medium">/year</span>
             </div>
 

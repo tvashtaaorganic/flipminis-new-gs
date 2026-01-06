@@ -63,7 +63,7 @@ export default function OnboardForm() {
             return;
         }
 
-        const amount = formData.plan === 'monthly' ? 200 : 2000;
+        const amount = formData.plan === 'monthly' ? 200 : 1200;
 
         const options = {
             key: "rzp_live_RjWggtvUprVXfJ", // Live Key from User
@@ -71,7 +71,7 @@ export default function OnboardForm() {
             currency: "INR",
             name: "Flipminis Platform",
             description: `Subscription for ${formData.storeName}`,
-            image: "https://example.com/your_logo", // Placeholder
+            image: "https://lh3.googleusercontent.com/pw/AP1GczPbj9Cu_GjIa7KrcBVxzOuBheZJWNIQ0M3qp-sfhNqHSsZ5Eym6HuS7Xmm_KRmWRhcux5xQAK2ZAcH0gmjRlRTHSSNcx2JpCLilcqyeXIRp1uFGpSP7lMK9x75E6LEbcSzpR4x_qvoY-zFiTHgf5ze4=w1531-h400-s-no-gm?authuser=0",
             handler: async function (response: any) {
                 await createStore(response.razorpay_payment_id);
             },
@@ -373,9 +373,9 @@ export default function OnboardForm() {
                                     onClick={() => setFormData({ ...formData, plan: 'yearly' })}
                                     className={`cursor-pointer border-2 rounded-2xl p-4 text-center transition-all duration-200 relative overflow-hidden ${formData.plan === 'yearly' ? 'border-blue-500 bg-blue-50/80 dark:bg-blue-900/20 scale-105 shadow-xl ring-2 ring-blue-500 ring-opacity-50' : 'border-slate-200 dark:border-slate-700 bg-white/40 hover:border-blue-300 hover:bg-white/60'}`}
                                 >
-                                    <div className="absolute top-0 right-0 bg-green-500 text-white text-[10px] px-2 py-1 rounded-bl-lg font-bold shadow-sm">SAVE ₹400</div>
+                                    <div className="absolute top-0 right-0 bg-green-500 text-white text-[10px] px-2 py-1 rounded-bl-lg font-bold shadow-sm">SAVE ₹1200</div>
                                     <div className="font-bold text-lg mb-1 text-slate-800 dark:text-white">Yearly</div>
-                                    <div className="text-3xl font-black text-blue-600 dark:text-blue-400">₹2000</div>
+                                    <div className="text-3xl font-black text-blue-600 dark:text-blue-400">₹1200</div>
                                     <div className="text-xs text-slate-500 font-medium mt-1">per year</div>
                                 </div>
                             </div>
@@ -399,7 +399,7 @@ export default function OnboardForm() {
                                         </>
                                     ) : (
                                         <>
-                                            Pay <span className="underline decoration-white/30 decoration-2 underline-offset-2">₹{formData.plan === 'monthly' ? '200' : '2000'}</span> & Launch 🚀
+                                            Pay <span className="underline decoration-white/30 decoration-2 underline-offset-2">₹{formData.plan === 'monthly' ? '200' : '1200'}</span> & Launch 🚀
                                         </>
                                     )}
                                 </button>
