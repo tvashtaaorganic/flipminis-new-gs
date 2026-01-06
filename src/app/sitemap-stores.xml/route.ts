@@ -9,8 +9,8 @@ export async function GET() {
     const stores = await getCachedStores();
     const activeStores = stores.filter(s => s.status === 'active');
 
-    // Calculate how many sitemap files we need
-    const totalPages = Math.ceil(activeStores.length / MAX_URLS_PER_SITEMAP);
+    // Calculate how many sitemap files we need (minimum 1)
+    const totalPages = Math.max(1, Math.ceil(activeStores.length / MAX_URLS_PER_SITEMAP));
 
     // Generate Sitemap Index XML
     const sitemaps = Array.from({ length: totalPages }, (_, i) => ({
