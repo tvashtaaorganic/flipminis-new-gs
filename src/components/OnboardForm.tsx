@@ -82,6 +82,12 @@ export default function OnboardForm() {
             },
             theme: {
                 color: "#2563eb"
+            },
+            modal: {
+                ondismiss: function () {
+                    setError('Payment was cancelled. You can try again when ready.');
+                    setLoading(false);
+                }
             }
         };
 
