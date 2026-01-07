@@ -224,7 +224,7 @@ export default function OnboardForm() {
                                     <label className="block text-sm font-bold mb-1.5 ml-1 text-slate-700 dark:text-slate-200">Store URL Handle</label>
                                     <div className="relative">
                                         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                            <span className="text-slate-500 font-medium">flipminis.in/@</span>
+                                            <span className="text-slate-500 font-medium">flipminis.in/</span>
                                         </div>
                                         <input
                                             type="text"

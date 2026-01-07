@@ -101,7 +101,7 @@ export default function ProductDetailsClient({ store, product, similarProducts }
                 <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-md overflow-hidden mb-12 border border-slate-100 dark:border-slate-800">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
                         {/* LEFT: Image Gallery - Sticky & Compact */}
-                        <div className="p-5 md:p-5 bg-white dark:bg-slate-900 flex flex-col items-center justify-start border-b md:border-b-0 md:border-r border-slate-100 dark:border-slate-800 relative md:sticky md:top-5 md:self-start">
+                        <div className="p-0 md:p-0 bg-white dark:bg-slate-900 flex flex-col items-center justify-start border-b md:border-b-0 md:border-r border-slate-100 dark:border-slate-800 relative md:sticky md:top-5 md:self-start">
                             {discountPercentage > 0 && (
                                 <div className="absolute top-6 left-6 z-10 bg-rose-600 text-white text-sm font-bold px-4 py-1.5 rounded-full shadow-lg animate-pulse">
                                     {discountPercentage}% OFF

@@ -111,13 +111,13 @@ export default function BusinessCategories() {
     };
 
     return (
-        <section className="w-full py-16 px-4 bg-slate-50 dark:bg-slate-900/50">
+        <section className="w-full py-12 md:py-16 px-4 bg-slate-50 dark:bg-slate-900/50">
             <div className="container mx-auto max-w-7xl">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">
+                <div className="text-center mb-8 md:mb-12">
+                    <h2 className="text-2xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-3 md:mb-4 px-2">
                         Perfect for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Every Business</span>
                     </h2>
-                    <p className="text-lg text-slate-500 dark:text-slate-400">
+                    <p className="text-sm md:text-lg text-slate-500 dark:text-slate-400">
                         Join thousands of businesses already growing on our platform
                     </p>
                 </div>
@@ -126,34 +126,34 @@ export default function BusinessCategories() {
                     {/* Scroll Buttons (Desktop & Mobile) */}
                     <button
                         onClick={scrollLeft}
-                        className="flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-4 z-10 w-10 h-10 md:w-12 md:h-12 bg-white dark:bg-slate-800 rounded-full shadow-lg items-center justify-center text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all opacity-100 border border-slate-200 dark:border-slate-700"
+                        className="flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-4 z-10 w-8 h-8 md:w-12 md:h-12 bg-white dark:bg-slate-800 rounded-full shadow-lg items-center justify-center text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all opacity-100 border border-slate-200 dark:border-slate-700"
                     >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
+                        <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
                     </button>
 
                     <button
                         onClick={scrollRight}
-                        className="flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-4 z-10 w-10 h-10 md:w-12 md:h-12 bg-white dark:bg-slate-800 rounded-full shadow-lg items-center justify-center text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all opacity-100 border border-slate-200 dark:border-slate-700"
+                        className="flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-4 z-10 w-8 h-8 md:w-12 md:h-12 bg-white dark:bg-slate-800 rounded-full shadow-lg items-center justify-center text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all opacity-100 border border-slate-200 dark:border-slate-700"
                     >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+                        <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
                     </button>
 
                     {/* Scrolling Container */}
                     <div
                         ref={scrollContainerRef}
-                        className="flex overflow-x-auto gap-4 pb-8 -mx-4 px-4 snap-x snap-mandatory hide-scrollbar"
+                        className="flex overflow-x-auto gap-4 md:gap-4 pb-6 md:pb-8 -mx-4 px-4 snap-x snap-mandatory hide-scrollbar"
                         style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}
                     >
                         {businessTypes.map((biz, index) => (
                             <div
                                 key={index}
-                                className="flex-none w-64 md:w-72 bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-all hover:-translate-y-1 snap-start"
+                                className="flex-none w-[calc(50%-8px)] md:w-72 bg-white dark:bg-slate-800 rounded-xl md:rounded-2xl p-5 md:p-6 shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-all hover:-translate-y-1 snap-start"
                             >
-                                <div className={`w-14 h-14 rounded-xl ${biz.color} flex items-center justify-center text-2xl mb-4`}>
+                                <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl ${biz.color} flex items-center justify-center text-2xl mb-3 md:mb-4`}>
                                     {biz.icon}
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{biz.title}</h3>
-                                <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                                <h3 className="text-base md:text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">{biz.title}</h3>
+                                <p className="text-sm md:text-sm text-slate-500 dark:text-slate-400 leading-tight md:leading-relaxed">
                                     {biz.description}
                                 </p>
                             </div>
